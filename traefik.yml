@@ -12,5 +12,7 @@ certificatesResolvers:
       httpChallenge:
         entryPoint: web
 
-api:
-  dashboard: true
+providers:
+  file:
+    directory: /domains
+    watch: true

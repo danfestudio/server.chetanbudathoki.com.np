@@ -6,10 +6,10 @@ http:
         - websecure
       tls:
         certResolver: letsencrypt
-      service: ojassolutions
+      service: ojassolutions-service
 
   services:
-    ojassolutions:
+    ojassolutions-service:
       loadBalancer:
         servers:
-          - url: "http://localhost:8001/"
+          - url: "http://127.0.0.1:8001"
