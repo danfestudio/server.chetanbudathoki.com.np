@@ -1,0 +1,15 @@
+http:
+  routers:
+    ojassolutions:
+      rule: "Host(`ojassolutions.com.np`)"
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt
+      service: ojassolutions
+
+  services:
+    ojassolutions:
+      loadBalancer:
+        servers:
+          - url: "http://localhost:8001/"

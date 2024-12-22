@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  traefik:
+    image: "traefik:v2.10"
+    container_name: "traefik"
+    restart: unless-stopped
+    command:
+      - "--api.insecure=true"
+      - "--providers.file.directory=/domains"
+      - "--providers.file.watch=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/home/cb/server/traefik.yml:/traefik.yml:ro"
+      - "/home/cb/server/domains:/domains:ro"
+      - "/home/cb/server/letsencrypt:/letsencrypt"
