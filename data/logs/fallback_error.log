@@ -1,0 +1,2 @@
+2024/12/24 12:09:21 [error] 173#173: *58 open() "/var/www/html/r.php" failed (2: No such file or directory), client: 161.35.43.155, server: localhost-nginx-proxy-manager, request: "GET /r.php HTTP/1.1", host: "161.97.141.69"
+2024/12/24 12:14:25 [error] 308#308: *333 open() "/var/www/html/cgi-bin/luci/;stok=/locale" failed (2: No such file or directory), client: 185.16.39.9, server: localhost-nginx-proxy-manager, request: "GET /cgi-bin/luci/;stok=/locale HTTP/1.1", host: "161.97.141.69:80"

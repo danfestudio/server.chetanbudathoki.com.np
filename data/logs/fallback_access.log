@@ -1,0 +1,4 @@
+[24/Dec/2024:12:09:21 +0000] 404 - GET http 161.97.141.69 "/r.php" [Client 161.35.43.155] [Length 150] [Gzip -] "Java/1.8.0_432" "-"
+[24/Dec/2024:12:13:12 +0000] 400 - - http localhost-nginx-proxy-manager "-" [Client 139.59.143.102] [Length 154] [Gzip -] "-" "-"
+[24/Dec/2024:12:14:25 +0000] 404 - GET http 161.97.141.69 "/cgi-bin/luci/;stok=/locale" [Client 185.16.39.9] [Length 150] [Gzip -] "-" "-"
+[24/Dec/2024:12:15:20 +0000] 400 - GET http www.enteratemagazineny.com "/" [Client 203.55.131.3] [Length 654] [Gzip -] "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" "-"

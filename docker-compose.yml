@@ -1,24 +1,14 @@
-version: '3'
-
+version: '3.8'
 services:
-  traefik:
-    image: traefik:latest
-    command:
-      - "--api.insecure=true"
-      - "--providers.file.directory=/domain"
-      - "--providers.file.watch=true"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.websecure.address=:443"
-      - "--certificatesresolvers.myresolver.acme.email=danfestudio@outlook.com"
-      - "--certificatesresolvers.myresolver.acme.storage=acme.json"
-      - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
+      - '80:80'
+      - '443:443'
+      - '81:81' # Admin Web UI
     volumes:
-      - "./domains:/domains"
-      - "./acme.json:/acme.json"
-
-volumes:
-  acme.json:
-    driver: local
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+    
+      
