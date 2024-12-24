@@ -1,0 +1,16 @@
+http:
+  routers:
+    my-router:
+      rule: "Host(`chetanbudathoki.com.np`)"
+      service: chetanbudathoki
+      entryPoints:
+        - web
+        - websecure
+      tls:
+        certResolver: myresolver
+
+  services:
+    chetanbudathoki:
+      loadBalancer:
+        servers:
+          - url: "http://localhost:8002"

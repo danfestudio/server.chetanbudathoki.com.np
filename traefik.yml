@@ -4,15 +4,15 @@ entryPoints:
   websecure:
     address: ":443"
 
-certificatesResolvers:
-  letsencrypt:
-    acme:
-      email: danfestudio@outlook.com
-      storage: /letsencrypt/acme.json
-      httpChallenge:
-        entryPoint: web
-
 providers:
   file:
-    directory: /domains
+    directory: "/domains"
     watch: true
+
+certificatesResolvers:
+  myresolver:
+    acme:
+      email: danfestudio@outlook.com
+      storage: "acme.json"
+      httpChallenge:
+        entryPoint: "web"

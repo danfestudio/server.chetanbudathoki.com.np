@@ -20,6 +20,6 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_PRIVATE_KEY }}
         script: |
-          cd /home/cb/server          
+          cd /home/cb/projects/server.danfestudio.com          
           docker-compose down
           docker-compose up -d
